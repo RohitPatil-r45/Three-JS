@@ -2,7 +2,6 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
-
 const gui = new dat.GUI();
 const scene = new THREE.Scene();
 
@@ -27,32 +26,36 @@ loadingManager.onLoad = () => {
 loadingManager.onProgress = () => {
   console.log("onProgress");
 };
-loadingManager.onError = () => {
-  console.log("Error");
+loadingManager.onError = (e) => {
+  console.log(e);
 };
 const textureLoader = new THREE.TextureLoader(loadingManager);
 // const particleTexture = textureLoader.load("/textures/particles/11.png");
-const asteroidTexture = textureLoader.load("/textures/planets/asteroid1.jpeg");
-const sunTexture = textureLoader.load("/textures/planets/sunTexture.jpg");
+const asteroidTexture = textureLoader.load("./textures/planets/asteroid2.jpeg");
+const sunTexture = textureLoader.load("./textures/planets/sunTexture.jpg");
 const mercuryTexture = textureLoader.load(
-  "/textures/planets/mercuryTexture.jpg"
+  "./textures/planets/mercuryTexture.jpg"
 );
-const venusTexture = textureLoader.load("/textures/planets/venusTexture.jpg");
-const earthTexture = textureLoader.load("/textures/planets/earthTexture.jpg");
-const marsTexture = textureLoader.load("/textures/planets/marsTexture.jpg");
+const venusTexture = textureLoader.load("./textures/planets/venusTexture.jpg");
+const earthTexture = textureLoader.load("./textures/planets/earthTexture.jpg");
+const marsTexture = textureLoader.load("./textures/planets/marsTexture.jpg");
 const jupiterTexture = textureLoader.load(
-  "/textures/planets/jupiterTexture.jpg"
+  "./textures/planets/jupiterTexture.jpg"
 );
-const saturnTexture = textureLoader.load("/textures/planets/saturnTexture.jpg");
+const saturnTexture = textureLoader.load(
+  "./textures/planets/saturnTexture.jpg"
+);
 const saturnRingTexture = textureLoader.load(
-  "/textures/planets/saturnRingTexture.png"
+  "./textures/planets/saturnRingTexture.png"
 );
-const uranusTexture = textureLoader.load("/textures/planets/uranusTexture.jpg");
+const uranusTexture = textureLoader.load(
+  "./textures/planets/uranusTexture.jpg"
+);
 const neptuneTexture = textureLoader.load(
-  "/textures/planets/neptuneTexture.jpg"
+  "./textures/planets/neptuneTexture.jpg"
 );
 const starMilkyWayTexture = textureLoader.load(
-  "/textures/planets/starsMilkyWayTexture.jpg"
+  "./textures/planets/starsMilkyWayTexture.jpg"
 );
 
 ////////////////            Lights           ////////////////////////////////////
