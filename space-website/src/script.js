@@ -61,7 +61,7 @@ const starMilkyWayTexture = textureLoader.load(
 ////////////////            Lights           ////////////////////////////////////
 
 const light = new THREE.AmbientLight(0x404040, 0.8); // soft white light
-gui.add(light, "intensity", 0, 1, 0.01);
+gui.add(light, "intensity").min(0).max(1).step(0.1);
 // Light from sun
 const pointLight = new THREE.PointLight(0xffffff, 1, 350);
 pointLight.position.set(0, 0, 0);
