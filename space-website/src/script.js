@@ -17,18 +17,18 @@ const cursor = {
 };
 
 const loadingManager = new THREE.LoadingManager();
-loadingManager.onStart = () => {
-  console.log("onStart");
-};
-loadingManager.onLoad = () => {
-  console.log("onLoad");
-};
-loadingManager.onProgress = () => {
-  console.log("onProgress");
-};
-loadingManager.onError = (e) => {
-  console.log(e);
-};
+// loadingManager.onStart = () => {
+//   console.log("onStart");
+// };
+// loadingManager.onLoad = () => {
+//   console.log("onLoad");
+// };
+// loadingManager.onProgress = () => {
+//   console.log("onProgress");
+// };
+// loadingManager.onError = (e) => {
+//   console.log(e);
+// };
 const textureLoader = new THREE.TextureLoader(loadingManager);
 // const particleTexture = textureLoader.load("/textures/particles/11.png");
 const asteroidTexture = textureLoader.load("./textures/planets/asteroid2.jpeg");
